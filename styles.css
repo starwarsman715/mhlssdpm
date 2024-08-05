@@ -147,7 +147,15 @@ html, body {
     padding-right: 10%;
 }
 
-.collection-item span {
+.collection-content {
+    position: relative; /* Position relative for z-index control */
+    z-index: 2; /* Ensure the content is above the gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-content span {
     width: 608px;
     height: 147px;
     color: #FFFFF4;
@@ -156,8 +164,6 @@ html, body {
     font-weight: 400;
     letter-spacing: -3.3px;
     text-align: center;
-    position: relative; /* Ensure the text is above the gradient */
-    z-index: 2; /* Ensure the text is on top of the gradient */
 }
 
 .site-footer {
