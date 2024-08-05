@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Define initial offsets for each image based on its focal point
     const initialOffsets = {
-        boston: 50,    // Centered
-        montmelo: 40,  // Slightly higher
-        madrid: 60,    // Slightly lower
-        other: 50      // Centered
+        boston: 40,    // Centered
+        montmelo: 45,  // Slightly higher
+        madrid: 20,    // Slightly lower
+        other: 45      // Centered
     };
 
     function parallaxEffect() {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         collectionItems.forEach(item => {
             const rect = item.getBoundingClientRect();
             const offset = window.pageYOffset;
-            const speedY = 0.08; // Adjust vertical speed for more noticeable movement
+            const speedY = 0.1; // Adjust vertical speed for more noticeable movement
             const startScroll = rect.top - viewportHeight;
             const endScroll = rect.bottom;
 
