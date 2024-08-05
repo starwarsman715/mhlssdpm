@@ -14,6 +14,7 @@ html, body {
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%),
                  linear-gradient(0deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.14) 100%),
                  url('Assets/Home/Myself_main.jpg') center / cover no-repeat;
+    font-family: 'Nunito', sans-serif;
 }
 
 .hero {
@@ -50,12 +51,9 @@ html, body {
 
 .nav-links a {
     color: #FFFFF4;
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    letter-spacing: -0.6px;
     text-transform: capitalize;
     text-decoration: none;
 }
@@ -74,7 +72,6 @@ html, body {
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: -1.4px;
-    position: relative;
     margin: 9% 0 20px;
 }
 
@@ -106,40 +103,45 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Needed for positioning the gradient pseudo-element */
     text-decoration: none;
     background-size: cover;
     background-position: center;
 }
 
-
-
+.collection-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%);
+    z-index: 1; /* Ensure the gradient is on top of the image */
+}
 
 .collection-item.boston {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
-                url('Assets/Home/Skyline_main.jpg') center/cover no-repeat;
+    background: url('Assets/Home/Skyline_main.jpg') center/cover no-repeat;
     justify-content: flex-start;
     padding-left: 2.5%;
 }
 
 .collection-item.montmelo {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
-                url('Assets/Home/Straight_main.jpg') center/cover no-repeat;
+    background: url('Assets/Home/Straight_main.jpg') center/cover no-repeat;
     background-position: center 54%;
     justify-content: flex-end;
     padding-right: 15%;
 }
 
 .collection-item.madrid {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
-                url('Assets/Home/Cibeles_main.jpg') center/cover no-repeat;
+    background: url('Assets/Home/Cibeles_main.jpg') center/cover no-repeat;
     background-position: center 30%;
     justify-content: flex-start;
     padding-left: 9%;
 }
 
 .collection-item.other {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
-                url('Assets/Home/museo_2_main.jpg') center/cover no-repeat;
+    background: url('Assets/Home/museo_2_main.jpg') center/cover no-repeat;
     background-position: center 57%;
     justify-content: flex-end;
     padding-right: 10%;
@@ -149,11 +151,13 @@ html, body {
     width: 608px;
     height: 147px;
     color: #FFFFF4;
-    font-family: "Playfair Display";
+    font-family: 'Playfair Display', serif;
     font-size: 110px;
     font-weight: 400;
     letter-spacing: -3.3px;
     text-align: center;
+    position: relative; /* Ensure the text is above the gradient */
+    z-index: 2; /* Ensure the text is on top of the gradient */
 }
 
 .site-footer {
@@ -173,9 +177,8 @@ html, body {
 .footer-left {
     color: #1B1B1B;
     text-align: justify;
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     letter-spacing: -0.36px;
     text-transform: lowercase;
@@ -190,7 +193,6 @@ html, body {
     align-items: center;
     padding-left: 11%;
     cursor: pointer; /* Adds a pointer cursor on hover */
-
 }
 
 .footer-right a {
@@ -203,13 +205,10 @@ html, body {
     text-decoration: none;
     background-color: transparent;
     color: #1B1B1B;
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
     letter-spacing: -0.6px;
-    text-decoration: none;
 }
 
 .footer-right {
