@@ -101,7 +101,7 @@ html, body {
 
 .collection-item {
     width: 100%;
-    height: 300px; /* Adjust height for desired effect */
+    height: 380px; /* Increased height for a more noticeable parallax effect */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,13 +128,12 @@ html, body {
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers the content */
     justify-content: center;
+    height: 100%; /* Ensure it takes full height of the container */
 }
 
 .collection-content span {
-    width: 608px;
-    height: 147px;
     color: #FFFFF4;
     font-family: 'Playfair Display', serif;
     font-size: 110px;
@@ -147,7 +146,7 @@ html, body {
 .collection-item.boston {
     background-image: url('Assets/Home/Skyline_main.jpg');
     justify-content: flex-start;
-    padding-left: 2.5%;
+    padding-left: 9%;
 }
 
 .collection-item.montmelo {
@@ -159,34 +158,13 @@ html, body {
 .collection-item.madrid {
     background-image: url('Assets/Home/Cibeles_main.jpg');
     justify-content: flex-start;
-    padding-left: 9%;
+    padding-left: 15%;
 }
 
 .collection-item.other {
     background-image: url('Assets/Home/museo_2_main.jpg');
     justify-content: flex-end;
     padding-right: 10%;
-}
-
-
-
-.collection-content {
-    position: relative; /* Position relative for z-index control */
-    z-index: 2; /* Ensure the content is above the gradient */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.collection-content span {
-    width: 608px;
-    height: 147px;
-    color: #FFFFF4;
-    font-family: 'Playfair Display', serif;
-    font-size: 110px;
-    font-weight: 400;
-    letter-spacing: -3.3px;
-    text-align: center;
 }
 
 .site-footer {
@@ -224,6 +202,12 @@ html, body {
     cursor: pointer; /* Adds a pointer cursor on hover */
 }
 
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .footer-right a {
     display: flex;
     width: 81px;
@@ -238,10 +222,4 @@ html, body {
     font-size: 20px;
     font-weight: 300;
     letter-spacing: -0.6px;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }

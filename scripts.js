@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const collectionItems = document.querySelectorAll(".collection-item");
 
     // Throttle mechanism
@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
         boston: 40,    // Centered
         montmelo: 45,  // Slightly higher
         madrid: 20,    // Slightly lower
-        other: 45      // Centered
+        other: 40      // Centered
+    };
+
+    // Parallax speed factor for background images
+    const speedFactors = {
+        midground: 0.1,  // Background images
     };
 
     function parallaxEffect() {
@@ -18,19 +23,16 @@ document.addEventListener("DOMContentLoaded", function() {
         collectionItems.forEach(item => {
             const rect = item.getBoundingClientRect();
             const offset = window.pageYOffset;
-            const speedY = 0.1; // Adjust vertical speed for more noticeable movement
-            const startScroll = rect.top - viewportHeight;
-            const endScroll = rect.bottom;
 
             if (rect.top < viewportHeight && rect.bottom > 0) {
                 const itemId = item.classList[1]; // Assuming class names like 'boston', 'montmelo', etc.
                 const initialOffsetY = initialOffsets[itemId] || 50; // Fallback to 50% if not defined
 
                 // Calculate percentage of visibility
-                const scrollPercentage = (offset - startScroll) / (endScroll - startScroll);
+                const scrollPercentage = (offset - (rect.top - viewportHeight)) / (rect.bottom - rect.top + viewportHeight);
 
-                // Calculate offsets for both vertical movement
-                const backgroundOffsetY = initialOffsetY + ((scrollPercentage - 0.5) * 100 * speedY);
+                // Calculate offset for background images
+                const backgroundOffsetY = initialOffsetY + ((scrollPercentage - 0.5) * 100 * speedFactors.midground);
 
                 // Set background position
                 item.style.backgroundPosition = `50% ${backgroundOffsetY}%`;
