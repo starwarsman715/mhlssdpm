@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playfair+Display:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%),
+                 linear-gradient(0deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.14) 100%),
+                 url('Assets/Home/Myself_main.jpg') center / cover no-repeat;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    min-height: 826px;
+    padding-top: 100px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 42px;
+    background-color: transparent;
+}
+
+.navbar .logo-link {
+    width: 158px;
+    height: 117px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.nav-links a {
+    color: #FFFFF4;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #C5C4B6;
+}
+
+.intro-text {
+    color: #FFFFF4;
+    width: 70%;
+    padding-left: 10%;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -1.4px;
+    position: relative;
+    margin: 9% 0 20px;
+}
+
+.highlight {
+    position: relative;
+    display: inline; /* Ensure this is inline to fit the text */
+    text-decoration: none;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Adjust this if the underline is too close or too far from the text */
+    border-bottom: 2px solid #FFFFF4; /* Adjust thickness and color as needed */
+    width: 100%; /* This should cover the full width of the text */
+}
+
+.collections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.collection-item {
+    width: 100%;
+    height: 259.875px; /* Initial height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.collection-item.boston {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
+                url('Assets/Home/Skyline_main.jpg') center/cover no-repeat;
+    justify-content: flex-start;
+    padding-left: 2.5%;
+}
+
+.collection-item.montmelo {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
+                url('Assets/Home/Straight_main.jpg') center/cover no-repeat;
+    background-position: center 54%;
+    justify-content: flex-end;
+    padding-right: 15%;
+}
+
+.collection-item.madrid {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
+                url('Assets/Home/Cibeles_main.jpg') center/cover no-repeat;
+    background-position: center 30%;
+    justify-content: flex-start;
+    padding-left: 9%;
+}
+
+.collection-item.other {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.45) 100%), 
+                url('Assets/Home/museo_2_main.jpg') center/cover no-repeat;
+    background-position: center 57%;
+    justify-content: flex-end;
+}
+
+.collection-item span {
+    width: 608px;
+    height: 147px;
+    color: #FFFFF4;
+    font-family: "Playfair Display";
+    font-size: 110px;
+    font-weight: 400;
+    letter-spacing: -3.3px;
+    text-align: center;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 138px;
+    padding: 0 50px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    background: #FFFFF4; /* Updated background color */
+}
+
+.footer-left, .footer-right, .footer-logo {
+    flex-shrink: 0;
+}
+
+.footer-left {
+    color: #1B1B1B;
+    text-align: justify;
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    text-transform: lowercase;
+}
+
+.footer-logo {
+    display: flex;
+    width: 57px;
+    height: 86px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 11%;
+    cursor: pointer; /* Adds a pointer cursor on hover */
+
+}
+
+.footer-right a {
+    display: flex;
+    width: 81px;
+    height: 27px;
+    padding-right: 1px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #1B1B1B;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    text-decoration: none;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
