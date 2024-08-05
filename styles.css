@@ -142,6 +142,7 @@ html, body {
                 url('Assets/Home/museo_2_main.jpg') center/cover no-repeat;
     background-position: center 57%;
     justify-content: flex-end;
+    padding-right: 10%;
 }
 
 .collection-item span {
