@@ -164,7 +164,7 @@ html, body {
 .collection-item.other {
     background-image: url('Assets/Home/museo_2_main.jpg');
     justify-content: flex-end;
-    padding-right: 10%;
+    padding-right: 11%;
 }
 
 .site-footer {
@@ -176,7 +176,6 @@ html, body {
     box-sizing: border-box;
     background: #FFFFF4; /* Updated background color */
 }
-
 .footer-left, .footer-right, .footer-logo {
     flex-shrink: 0;
 }
