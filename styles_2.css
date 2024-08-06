@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playfair+Display:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: normal;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFEEB;
+}
+
+header.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 42px;
+    background-color: transparent;
+}
+
+.navbar .logo-link {
+    width: 158px;
+    height: 117px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.nav-links a {
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #434343;
+}
+
+.About {
+    width: 1440px;
+    height: 637px;
+    position: relative; /* Sets the positioning context for absolute children */
+    display: flex; /* Use flexbox for the main layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 50px 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.About .title {
+    position: absolute; /* Absolute position for fine control */
+    top: -30px; /* Move upwards by 20px */
+    left: 0; /* Keep it aligned to the left */
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.About .text {
+    position: absolute; /* Absolute position for fine control */
+    top: 100px; /* Adjust top to align as needed */
+    left: 10px; /* Adjust left as necessary */
+    width: 655px;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.About .foto_boston {
+    position: absolute; /* Absolute position for fine control */
+    bottom: 150px; /* Adjust bottom to align as needed */
+    left: 30; /* Adjust left as necessary */
+    width: 549px;
+    height: 186px;
+    background: url('Assets/About/Wallpaper_about.jpg') center / cover no-repeat;
+}
+
+.About .foto_mia {
+    position: absolute; /* Absolute position for fine control */
+    top: 50px; /* Adjust top to align as needed */
+    right: 0; /* Adjust right as necessary */
+    width: 391px;
+    height: 521px;
+    background: url('Assets/About/Me_about.jpg') center / cover no-repeat;
+}
+
+footer.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #FFFEEB;
+}
+
+.footer-left, .footer-right, .footer-logo {
+    flex-shrink: 0;
+}
+
+.footer-left {
+    color: #1B1B1B;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+
+.footer-logo {
+    cursor: pointer;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-right a {
+    display: flex;
+    width: 81px;
+    height: 27px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #1B1B1B;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+}

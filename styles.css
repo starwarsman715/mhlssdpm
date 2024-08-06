@@ -50,7 +50,7 @@ html, body {
 }
 
 .nav-links a {
-    color: #FFFFF4;
+    color: #FFFEEB;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     font-weight: 300;
@@ -63,7 +63,7 @@ html, body {
 }
 
 .intro-text {
-    color: #FFFFF4;
+    color: #FFFEEB;
     width: 70%;
     padding-left: 10%;
     text-align: left;
@@ -87,7 +87,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0; /* Adjust this if the underline is too close or too far from the text */
-    border-bottom: 2px solid #FFFFF4; /* Adjust thickness and color as needed */
+    border-bottom: 2px solid #FFFEEB; /* Adjust thickness and color as needed */
     width: 100%; /* This should cover the full width of the text */
 }
 
@@ -134,7 +134,7 @@ html, body {
 }
 
 .collection-content span {
-    color: #FFFFF4;
+    color: #FFFEEB;
     font-family: 'Playfair Display', serif;
     font-size: 110px;
     font-weight: 400;
@@ -174,7 +174,7 @@ html, body {
     height: 138px;
     padding: 0 50px; /* Adjust padding as needed */
     box-sizing: border-box;
-    background: #FFFFF4; /* Updated background color */
+    background: #FFFEEB; /* Updated background color */
 }
 .footer-left, .footer-right, .footer-logo {
     flex-shrink: 0;
