@@ -62,12 +62,13 @@ header.navbar {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    left: 40px;
 }
 
 .About .title {
     position: absolute; /* Absolute position for fine control */
-    top: -30px; /* Move upwards by 20px */
-    left: 0; /* Keep it aligned to the left */
+    top: -30px; /* Move upwards */
+    left: -40px; /* Keep it aligned to the left */
     color: #000;
     font-family: "Playfair Display", serif;
     font-size: 30px;
@@ -77,28 +78,28 @@ header.navbar {
 
 .About .text {
     position: absolute; /* Absolute position for fine control */
-    top: 100px; /* Adjust top to align as needed */
-    left: 10px; /* Adjust left as necessary */
+    top: 85px; /* Adjust top to align as needed */
+    left: 5px; /* Adjust left as necessary */
     width: 655px;
     color: #000;
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    font-size: 18.5px;
     font-weight: 300;
 }
 
 .About .foto_boston {
     position: absolute; /* Absolute position for fine control */
     bottom: 150px; /* Adjust bottom to align as needed */
-    left: 30; /* Adjust left as necessary */
-    width: 549px;
-    height: 186px;
+    left: 27px; /* Adjust left as necessary */
+    width: 603.9px; /* Increased width by 110% */
+    height: 180px; /* Increased height by 110% */
     background: url('Assets/About/Wallpaper_about.jpg') center / cover no-repeat;
 }
 
 .About .foto_mia {
     position: absolute; /* Absolute position for fine control */
-    top: 50px; /* Adjust top to align as needed */
-    right: 0; /* Adjust right as necessary */
+    top: 5px; /* Adjust top to align as needed */
+    right: 40px; /* Adjust right as necessary */
     width: 391px;
     height: 521px;
     background: url('Assets/About/Me_about.jpg') center / cover no-repeat;
@@ -108,22 +109,34 @@ footer.site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: #FFFEEB;
+    height: 138px;
+    padding: 0 50px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    background: #FFFEEB; /* Updated background color */
 }
-
 .footer-left, .footer-right, .footer-logo {
     flex-shrink: 0;
 }
 
 .footer-left {
     color: #1B1B1B;
+    text-align: justify;
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    text-transform: lowercase;
 }
 
 .footer-logo {
-    cursor: pointer;
+    display: flex;
+    width: 57px;
+    height: 86px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 11%;
+    cursor: pointer; /* Adds a pointer cursor on hover */
 }
 
 .footer-right {
@@ -136,9 +149,11 @@ footer.site-footer {
     display: flex;
     width: 81px;
     height: 27px;
+    padding-right: 1px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    background-color: transparent;
     color: #1B1B1B;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
