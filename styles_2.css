@@ -12,8 +12,9 @@ html, body {
     line-height: normal;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
     background-color: #FFFEEB;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
 }
 
 header.navbar {
@@ -54,10 +55,10 @@ header.navbar {
 .About {
     width: 1440px;
     height: 637px;
-    position: relative; /* Sets the positioning context for absolute children */
-    display: flex; /* Use flexbox for the main layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: flex-start; /* Align items to the start */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 50px 5%;
     width: 100%;
     max-width: 1200px;
@@ -66,20 +67,19 @@ header.navbar {
 }
 
 .About .title {
-    position: absolute; /* Absolute position for fine control */
-    top: -30px; /* Move upwards */
-    left: -40px; /* Keep it aligned to the left */
+    position: absolute;
+    top: -30px;
+    left: -40px;
     color: #000;
     font-family: "Playfair Display", serif;
     font-size: 30px;
     font-weight: 400;
 }
 
-
 .About .text {
-    position: absolute; /* Absolute position for fine control */
-    top: 85px; /* Adjust top to align as needed */
-    left: 5px; /* Adjust left as necessary */
+    position: absolute;
+    top: 85px;
+    left: 5px;
     width: 655px;
     color: #000;
     font-family: 'Nunito', sans-serif;
@@ -88,18 +88,18 @@ header.navbar {
 }
 
 .About .foto_boston {
-    position: absolute; /* Absolute position for fine control */
-    bottom: 150px; /* Adjust bottom to align as needed */
-    left: 27px; /* Adjust left as necessary */
-    width: 603.9px; /* Increased width by 110% */
-    height: 180px; /* Increased height by 110% */
+    position: absolute;
+    bottom: 150px;
+    left: 27px;
+    width: 603.9px;
+    height: 180px;
     background: url('Assets/About/Wallpaper_about.jpg') center / cover no-repeat;
 }
 
 .About .foto_mia {
-    position: absolute; /* Absolute position for fine control */
-    top: 5px; /* Adjust top to align as needed */
-    right: 40px; /* Adjust right as necessary */
+    position: absolute;
+    top: 5px;
+    right: 40px;
     width: 391px;
     height: 521px;
     background: url('Assets/About/Me_about.jpg') center / cover no-repeat;
@@ -110,10 +110,11 @@ footer.site-footer {
     justify-content: space-between;
     align-items: center;
     height: 138px;
-    padding: 0 50px; /* Adjust padding as needed */
+    padding: 0 50px;
     box-sizing: border-box;
-    background: #FFFEEB; /* Updated background color */
+    background: #FFFEEB;
 }
+
 .footer-left, .footer-right, .footer-logo {
     flex-shrink: 0;
 }
@@ -136,7 +137,9 @@ footer.site-footer {
     justify-content: center;
     align-items: center;
     padding-left: 11%;
-    cursor: pointer; /* Adds a pointer cursor on hover */
+    cursor: pointer; /* Ensures the element is clickable */
+    z-index: 1000; /* Keeps it above other content */
+    position: relative; /* Adjust if needed to ensure it's above other content */
 }
 
 .footer-right {
