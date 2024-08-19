@@ -17,6 +17,7 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* Navbar */
 header.navbar {
     top: 0;
     left: 0;
@@ -24,7 +25,7 @@ header.navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 24px 42px;
+    padding: 16px 42px; /* Reduce top padding */
     background-color: transparent;
 }
 
@@ -52,6 +53,49 @@ header.navbar {
     color: #434343;
 }
 
+/* Main Content: Boston Title and Quote */
+.content-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: -80px; /* Move the entire content wrapper up */
+}
+
+.title-wrapper .boston-title {
+    width: 247px;
+    height: 84px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 57px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.71px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto 10px auto; /* Reduce the bottom margin */
+}
+
+.quote-wrapper .quote-text {
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quote-wrapper .author {
+    margin-top: 5px; /* Reduce the top margin */
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    margin-left: 300px;
+}
+
+/* Footer */
 footer.site-footer {
     display: flex;
     justify-content: space-between;
@@ -84,9 +128,9 @@ footer.site-footer {
     justify-content: center;
     align-items: center;
     padding-left: 11%;
-    cursor: pointer; /* Ensures the element is clickable */
-    z-index: 1000; /* Keeps it above other content */
-    position: relative; /* Adjust if needed to ensure it's above other content */
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
 }
 
 .footer-right {
@@ -110,4 +154,3 @@ footer.site-footer {
     font-weight: 300;
     letter-spacing: -0.6px;
 }
-
