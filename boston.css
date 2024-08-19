@@ -96,6 +96,28 @@ header.navbar {
     margin-left: 300px;
 }
 
+/* Photo Columns */
+.photos {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 1350px;
+    padding-top: 50px;
+}
+
+.photos .col1, .photos .col2, .photos .col3 {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.photos img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
 /* Footer */
 footer.site-footer {
     display: flex;
