@@ -82,3 +82,85 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.photos img');
+    let currentIndex = 0;
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+
+    const img = document.createElement('img');
+    lightbox.appendChild(img);
+
+    const prevButton = document.createElement('span');
+    prevButton.className = 'prev';
+    prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>'; // Font Awesome left icon
+    lightbox.appendChild(prevButton);
+
+    const nextButton = document.createElement('span');
+    nextButton.className = 'next';
+    nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>'; // Font Awesome right icon
+    lightbox.appendChild(nextButton);
+
+    const closeButton = document.createElement('span');
+    closeButton.className = 'close';
+    closeButton.innerHTML = '&times;';
+    lightbox.appendChild(closeButton);
+
+    document.body.appendChild(lightbox);
+
+    function showImage(index) {
+        img.src = images[index].src;
+        currentIndex = index;
+        lightbox.style.display = 'flex';
+        document.body.classList.add('lightbox-active');
+    }
+
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            showImage(index);
+        });
+    });
+
+    closeButton.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.classList.remove('lightbox-active');
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        showImage(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+            document.body.classList.remove('lightbox-active');
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.photos img');
+
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight * 0.496; // Trigger earlier (90% down the viewport)
+
+        images.forEach(img => {
+            const imgTop = img.getBoundingClientRect().top;
+
+            if (imgTop < triggerBottom) {
+                img.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check in case some images are already in view
+});
