@@ -68,7 +68,7 @@ header.navbar {
 
 .Contact .title {
     position: absolute;
-    top: 130px;
+    top: 165px;
     left: 550px;
     color: #000;
     font-family: "Playfair Display", serif;
@@ -78,7 +78,7 @@ header.navbar {
 
 .Contact .text {
     position: absolute;
-    top: 230px;
+    top: 255px;
     left: 550px;
     width: 497px;
     color: #000;
@@ -94,7 +94,7 @@ header.navbar {
     margin: 20px 0; /* Adjust margin as needed */
     width: 530px; /* Ensures it spans full width of container */
     left: 530px;
-    top: 195px;
+    top: 225px;
 }
 
 .Contact .foto_mia {
