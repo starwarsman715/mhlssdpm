@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin-top: 2px; /* Fixed spacing issue */
 }
 
 html, body {
@@ -26,8 +25,9 @@ header.navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 16px 42px; /* Reduce top padding */
+    padding: 24px 42px;
     background-color: transparent;
+
 }
 
 .navbar .logo-link {
