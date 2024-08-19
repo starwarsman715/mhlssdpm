@@ -145,12 +145,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll('.photos img');
 
     function checkVisibility() {
-        const triggerBottom = window.innerHeight * 0.496; // Trigger earlier (90% down the viewport)
+        const triggerBottom = window.innerHeight * 0.496; // Trigger earlier (50% down the viewport)
 
         images.forEach(img => {
             const imgTop = img.getBoundingClientRect().top;
@@ -163,4 +162,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check in case some images are already in view
+});
+
+// Add fade-in effect to the intro-text
+document.addEventListener("DOMContentLoaded", function () {
+    const introText = document.querySelector('.intro-text');
+
+    function checkIntroVisibility() {
+        const rect = introText.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+            introText.classList.add('fade-in');
+        }
+    }
+
+    window.addEventListener('scroll', checkIntroVisibility);
+    checkIntroVisibility(); // Initial check in case the intro text is already in view
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.About .title, .About .text, .About .foto_mia, .About .foto_boston');
+
+    function addAnimation() {
+        const viewportHeight = window.innerHeight;
+        
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const isInView = rect.top < viewportHeight && rect.bottom > 0;
+
+            if (isInView) {
+                // Add class for animation based on a condition or element type
+                element.classList.add('fade-in'); // or 'slide-in' depending on the effect you want
+            }
+        });
+    }
+
+    // Initial check
+    addAnimation();
+
+    // Check on scroll
+    window.addEventListener('scroll', addAnimation);
 });
