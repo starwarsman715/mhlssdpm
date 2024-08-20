@@ -57,3 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", onScroll);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const introText = document.querySelector('.intro-text');
+
+    function checkIntroVisibility() {
+        const rect = introText.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        if (rect.top < viewportHeight && rect.bottom > 0) {
+            introText.classList.add('fade-in');
+        }
+    }
+
+    window.addEventListener('scroll', checkIntroVisibility);
+    checkIntroVisibility(); // Initial check in case the intro text is already in view
+});
